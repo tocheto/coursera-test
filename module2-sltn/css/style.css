@@ -1,0 +1,75 @@
+h1 {
+	text-align: center;
+	margin-top:50px;
+	margin-bottom: 30px;
+}
+
+h1, .main-section article .article-header {
+	font-family: 'Lato', sans-serif;
+}
+
+.main-section {
+	font-size: 100%;
+}
+
+.main-section article {
+	position: relative;
+	padding: 15px;
+	margin-left: 1%; margin-right: 1%;
+	margin-bottom: 20px;
+	float:inherit;
+
+	background-color: silver;
+	border:1px solid black;
+	text-align: left;
+	
+	box-sizing: border-box;
+}
+
+.main-section article .article-header {
+	position: absolute; 
+	top:0px;  
+	right: 0px;
+	width: 120px; 
+	height: 30px;
+	border: 1px solid black;
+
+	color:white;
+	text-align: center;
+	font-size: 1.25em;
+
+	vertical-align: middle;
+	display: inline-block;
+
+	box-sizing: border-box;
+}
+
+#article-header-1{background-color: green;}
+#article-header-2{background-color: navy; color: white;}
+#article-header-3{background-color: maroon; color: white;}
+
+/* media queries : */
+/*1. Desktop : min width 992px - 3 equal sections */
+@media (min-width: 992px) {
+	.main-section article {
+		float: left;
+		width: 31%;
+		box-sizing: border-box;
+		
+	}
+}
+/*2. Tablet : 768px - 991px - 2 sections of 50% and 3rd section on new line, 100% */
+@media (min-width: 768px) and (max-width: 991px) {
+	.main-section article {
+		float: left;
+		width: 47%;
+		box-sizing: border-box;
+	}
+	.main-section article:last-child {
+		float: left;
+		width: 96%;
+
+		box-sizing: border-box;
+	}
+}
+/*3. Mobile : 0 -767px = Default behaviour, nothing to do*/
